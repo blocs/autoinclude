@@ -1,0 +1,20 @@
+<!-- data-include="bootstrap.html" -->
+
+<!-- data-attribute="id" data-val=$buttonBsTarget -->
+<!-- data-attribute="aria-labelledby" data-val=$buttonType data-postfix="Label" -->
+<div class="modal fade" tabindex="-1" aria-hidden="true" data-bloc="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- data-attribute="id" data-val=$buttonType data-postfix="Label" -->
+        <h5 class="modal-title" data-val=$modalTitle></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" data-exist=$modalCloseLabel></button>
+      </div>
+      <div class="modal-body" data-val=$modalBody></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-val=$modalCloseLabel data-exist=$modalCloseLabel></button>
+        <!-- data-include="modalButton" -->
+      </div>
+    </div>
+  </div>
+</div>
