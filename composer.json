@@ -1,0 +1,22 @@
+{
+    "name": "blocs\/autoinclude",
+    "type": "library",
+    "description": "The auto include template for BLOCS",
+    "keywords": [
+        "PHP",
+        "Package",
+        "Blocs",
+        "Laravel"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "LINEAR JAPAN Co.,Ltd.",
+            "email": "admin@linear-jp.biz",
+            "role": "Lead Developer"
+        }
+    ],
+    "require": {
+        "blocs\/blocs": "*"
+    }
+}
