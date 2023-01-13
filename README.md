@@ -1,4 +1,4 @@
-<div align="center"><img src="logo.svg" width="400" /></div>
+<div align="center"><img src="https://raw.githubusercontent.com/blocs/blocs/9e8ed5290890ceb2fc62930a686091d2031d3aa4/logo.svg" width="400" /></div>
 
 # The PHP Template engine for Laravel
 Laravelのためのテンプレートエンジン
