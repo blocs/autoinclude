@@ -4,7 +4,7 @@
 <!-- data-include="libphonenumber-js.min.js" -->
 
 $(function(){
-  $('.phone').on('blur', function(){
+  $('.ai-phone').on('blur', function(){
     let validateTel = function (value) {
       return /^[0０]/.test(value) && libphonenumber.isValidNumber(value, 'JP');
     }
