@@ -1,4 +1,4 @@
-<div align="center"><img src="https://raw.githubusercontent.com/blocs/blocs/9e8ed5290890ceb2fc62930a686091d2031d3aa4/logo.svg" width="400" /></div>
+<div align="center"><img src="logo.svg" width="400" /></div>
 
 # The PHP Template engine for Laravel
 Laravelのためのテンプレートエンジン
@@ -15,46 +15,63 @@ Laravelのためのテンプレートエンジン
 | [**Document**](https://blocs.jp/reference/)
 | [**English**](https://blocs.jp/en/readme.html)
 
-# Select2
+# 導入方法
+composerで導入してください。
 
-```html
-<select name="multipleSelect[]" class="select2" multiple="multiple" style="width:100%" />
-  <option value="1">Test1</option>
-  <option value="2">Test2</option>
-</select>
+```sh
+laravel-app % composer require blocs/autoinclude    
+Using version ^1.0 for blocs/autoinclude
+./composer.json has been created
+Running composer update blocs/autoinclude
+Loading composer repositories with package information
+Info from https://repo.packagist.org: #StandWithUkraine
+Updating dependencies
+Lock file operations: 2 installs, 0 updates, 0 removals
+  - Locking blocs/autoinclude (v1.0.0)
+  - Locking blocs/blocs (v1.1.28)
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Package operations: 2 installs, 0 updates, 0 removals
+  - Installing blocs/blocs (v1.1.28): Extracting archive
+  - Installing blocs/autoinclude (v1.0.0): Extracting archive
+Generating autoload files
 ```
 
 # Datepicker
 
 ```html
-<input type="text" name="datepicker" class="datepicker" />
+<input type="text" name="datepicker" class="ai-datepicker" />
+
+<!-- data-include="auto" -->
 ```
 
-# Button
+# Phone
 
 ```html
-<!--
-  data-include = "button_primary"
-  $buttonType = "submit"
-  $buttonFormaction = route('book.update', $book->id)
-  $buttonIcon = "fa-solid fa-pen"
-  $buttonLabel = "更新する"
-  $buttonTooltip = "本の情報を更新するよ"
-  $buttonBsPlacement = "left"
--->
+<input type="text" name="phone" class="ai-phone" />
+
+<!-- data-include="auto" -->
 ```
 
+# Select2
+
 ```html
-<!--
-  data-include = "button"
-  $buttonType = "submit"
-  $buttonClass = "btn btn-danger ms-3"
-  $buttonFormaction = route('book.destroy', $book->id)
-  $buttonIcon = "fa-solid fa-trash"
-  $buttonLabel = "削除する"
-  $buttonTooltip = "本を削除するよ"
-  $buttonBsPlacement = "right"
--->
+<select name="multipleSelect[]" class="ai-select2" multiple="multiple" style="width:100%" />
+  <option value="1">Test1</option>
+  <option value="2">Test2</option>
+</select>
+
+<!-- data-include="auto" -->
+```
+
+# Tooltip
+
+```html
+<!-- $title="Tooltip<br />テストです" -->
+<!-- data-attribute="title" data-val=$title -->
+<a data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom">Tooltip</a>
+
+<!-- data-include="auto" -->
 ```
 
 # Modal
@@ -82,4 +99,37 @@ Laravelのためのテンプレートエンジン
   $modalBody = "改行\n\n\n\n改行"
   $buttonBsTarget = "exampleModal"
 -->
+
+<!-- data-include="auto" -->
+```
+
+# Button
+
+```html
+<!--
+  data-include = "button"
+  $buttonType = "submit"
+  $buttonClass = "btn btn-danger ms-3"
+  $buttonFormaction = route('book.destroy', $book->id)
+  $buttonIcon = "fa-solid fa-trash"
+  $buttonLabel = "削除する"
+  $buttonTooltip = "本を削除するよ"
+  $buttonBsPlacement = "right"
+-->
+
+<!-- data-include="auto" -->
+```
+
+```html
+<!--
+  data-include = "button_primary"
+  $buttonType = "submit"
+  $buttonFormaction = route('book.update', $book->id)
+  $buttonIcon = "fa-solid fa-pen"
+  $buttonLabel = "更新する"
+  $buttonTooltip = "本の情報を更新するよ"
+  $buttonBsPlacement = "left"
+-->
+
+<!-- data-include="auto" -->
 ```
