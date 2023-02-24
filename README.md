@@ -68,6 +68,7 @@ Generating autoload files
 
 ```html
 <!-- data-include="auto" -->
+
 <!-- data-attribute="title" data-val="Tooltip<br />テストです" -->
 <a data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom">Tooltip</a>
 ```
