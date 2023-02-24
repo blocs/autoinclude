@@ -40,96 +40,60 @@ Generating autoload files
 # Datepicker
 
 ```html
-<input type="text" name="datepicker" class="ai-datepicker" />
-
 <!-- data-include="auto" -->
+
+<input type="text" name="datepicker" class="ai-datepicker" />
 ```
 
 # Phone
 
 ```html
-<input type="text" name="phone" class="ai-phone" />
-
 <!-- data-include="auto" -->
+
+<input type="text" name="phone" class="ai-phone" />
 ```
 
 # Select2
 
 ```html
+<!-- data-include="auto" -->
+
 <select name="multipleSelect[]" class="ai-select2" multiple="multiple" style="width:100%" />
   <option value="1">Test1</option>
   <option value="2">Test2</option>
 </select>
-
-<!-- data-include="auto" -->
 ```
 
 # Tooltip
 
 ```html
-<!-- $title="Tooltip<br />テストです" -->
-<!-- data-attribute="title" data-val=$title -->
-<a data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom">Tooltip</a>
-
 <!-- data-include="auto" -->
+<!-- data-attribute="title" data-val="Tooltip<br />テストです" -->
+<a data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom">Tooltip</a>
 ```
 
 # Modal
 
 ```html
-<!--
-  data-include = "button"
-  $buttonClass = "btn btn-primary"
-  $buttonIcon = "fa-brands fa-twitter"
-  $buttonLabel = "モーダルを開く"
-  $buttonBsTarget = "exampleModal"
--->
-
-<!-- data-bloc = "modalButton" -->
-<!--
-  data-include = "button_primary"
-  $buttonLabel = "登録"
--->
-<!-- data-endbloc -->
+<!-- data-include="auto" -->
 
 <!--
-  data-include = "modal"
   $modalTitle = "タイトル"
   $modalCloseLabel = "閉じる"
   $modalBody = "改行\n\n\n\n改行"
-  $buttonBsTarget = "exampleModal"
+  $modalTarget = "exampleModal"
 -->
 
-<!-- data-include="auto" -->
-```
+<!-- data-attribute="data-bs-target" data-val=$modalTarget data-prefix="#" -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal">
+    <i class="fa-brands fa-twitter"></i> モーダルを開く
+</button>
 
-# Button
+<!-- data-bloc = "modalButton" -->
+<button type="button" class="btn btn-primary">
+    <i class="fa-brands fa-twitter"></i> 登録
+</button>
+<!-- data-endbloc -->
 
-```html
-<!--
-  data-include = "button"
-  $buttonType = "submit"
-  $buttonClass = "btn btn-danger ms-3"
-  $buttonFormaction = route('book.destroy', $book->id)
-  $buttonIcon = "fa-solid fa-trash"
-  $buttonLabel = "削除する"
-  $buttonTooltip = "本を削除するよ"
-  $buttonBsPlacement = "right"
--->
-
-<!-- data-include="auto" -->
-```
-
-```html
-<!--
-  data-include = "button_primary"
-  $buttonType = "submit"
-  $buttonFormaction = route('book.update', $book->id)
-  $buttonIcon = "fa-solid fa-pen"
-  $buttonLabel = "更新する"
-  $buttonTooltip = "本の情報を更新するよ"
-  $buttonBsPlacement = "left"
--->
-
-<!-- data-include="auto" -->
+<!-- data-include = "modal" -->
 ```
